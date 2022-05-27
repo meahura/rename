@@ -1,7 +1,7 @@
 import sys
 import os
 import platform
-from ColorRandom.color_random_txt import colorMeakUP
+from colorMeakUP import color
 
 def main(platfroms:str):
    if platform == platfroms:
@@ -14,15 +14,15 @@ def main(platfroms:str):
       pass
 
    try:
-      
+
       args = sys.argv[1:100]
       sort_args =  " ".join(args)
 
       if sort_args == "-h" or sort_args == "--help":
-         colorMeakUP.color.Color("welocome to tools,rename! command down : \nrename [New Name] [old file]")
+         color.Color("welocome to tools,rename! command down : \nrename [New Name] [old file]")
 
       elif sort_args == "-o" or sort_args == '--owner':
-         colorMeakUP.color.Color("http://github.com/AhSiber")
+         color.Color("http://github.com/AhSiber")
 
       else:
          with open(args[1],mode='r') as readname:
